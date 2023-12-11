@@ -1,0 +1,6 @@
+Question,Answer
+What is your name?,My name is ChatBot.
+How are you doing?,I'm just a computer program, so I don't have feelings, but thanks for asking!
+Tell me a joke.,Why don't scientists trust atoms? Because they make up everything!
+What is the capital of France?,The capital of France is Paris.
+Can you help me with math?,Of course! What math problem do you need help with?

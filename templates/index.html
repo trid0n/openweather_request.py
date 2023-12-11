@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Information</title>
+</head>
+<body>
+
+<h1>Weather Information</h1>
+
+<form method="post" action="/">
+    <label for="location">Select Location:</label>
+    <select name="location" id="location">
+        {% for loc in locations %}
+            <option value="{{ loc.name }}">{{ loc.name }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Go</button>
+</form>
+
+{% if user_query %}
+
+{% endif %}
+
+{% for data in weather_data %}
+    <div>
+        <h2>Weather in {{ data.location }}</h2>
+        <p>City: {{ data.location }}</p>
+        <p>Temperature: {{ data.temperature }} Celsius</p>
+        <p>Feels like temperature: {{ data.feels_like_temperature }} Celsius</p>
+        <p>Humidity: {{ data.humidity }}%</p>
+        <p>Weather conditions: {{ data.weather_description }}</p>
+        <p>Wind speed: {{ data.wind_speed }} m/s</p>
+        <hr>
+    </div>
+{% endfor %}
+
+</body>
+</html>
